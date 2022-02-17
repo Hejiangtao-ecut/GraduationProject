@@ -18,10 +18,22 @@
 1. .js 脚本文件，大同小异，重点是里面的方法
 2. .json 页面配制文件
     - 不同级别的`json`文件可以进行不同级别的`json`配制
+
     - 小程序里面的4种 `json` 配制文件
         1. app.json 项目全局配制文件
-        2. project.config.json 
+            - 包括了小程序的所有页面路径，窗口外观，界面表现,底bar 等
+            - pages 页面路径
+            - window 定义小程序全局页面背景色、文字颜色等
+            - style 定义全局使用的样式版本
+            - sitemapLocation 声明 sitemap 的文件位置
+
+        2. project.config.json
+            - 用于记录小程序的个性化配制
+            - 比如 setting 里面包含了编译相关的配制
+
         3. sitemap.json 用于配制小程序和里面页面使用可被微信搜索检索
+
         4. 页面级别 .json,配制页面的一些基础配制，如使用的组件等
+
 3. .wxml 页面模板结构
 4. .wxss 当前页面的样式

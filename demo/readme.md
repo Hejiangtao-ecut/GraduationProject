@@ -32,8 +32,13 @@
             - 比如 setting 里面包含了编译相关的配制
 
         3. sitemap.json 用于配制小程序和里面页面使用可被微信搜索检索
+            - rules 页面索引规则
+                - action allow 允许索引， disallow 拒绝索引
+                - pages 索引的页面，`*`表示所有
 
         4. 页面级别 .json,配制页面的一些基础配制，如使用的组件等
+            - 和 app.json 作用相似，但是只作用于当前页面，优先级大于 app.json
+            - window 的属性声明直接写即可，无需写在 `window` 内
 
 3. .wxml 页面模板结构
 4. .wxss 当前页面的样式

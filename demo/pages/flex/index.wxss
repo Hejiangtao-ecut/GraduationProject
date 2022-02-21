@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.view1{
+    width: 30vw;
+    height: 30vw;
+    background-color: aqua;
+}
+.view2{
+    width: 30vw;
+    height: 30vw;
+    background-color: rgb(62, 158, 43);
+}
+.view3{
+    width: 30vw;
+    height: 30vw;
+    background-color: rgb(180, 51, 174);
+}

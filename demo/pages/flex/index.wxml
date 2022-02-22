@@ -3,3 +3,9 @@
   <view class="view2"></view>
   <view class="view3"></view>
 </view>
+
+<scroll-view class="container1" scroll-y>
+  <view class="view1"></view>
+  <view class="view2"></view>
+  <view class="view3"></view>
+</scroll-view>

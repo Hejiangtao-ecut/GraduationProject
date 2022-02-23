@@ -9,3 +9,7 @@
   <view class="view2"></view>
   <view class="view3"></view>
 </scroll-view>
+
+<view>{{info}}</view>
+
+<button type="primary" size="defaultSize" bindtap="defaultTap">Button</button>

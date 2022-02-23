@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    info: 'demo'
+  },
 
+  defaultTap(e) {
+    console.log(e);
   },
 
   /**

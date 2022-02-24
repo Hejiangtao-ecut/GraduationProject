@@ -1,14 +1,28 @@
 {
   "pages": [
     "pages/flex/index",
-    "pages/index/index",
-    "pages/home/index"
+    "pages/home/index",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#D8322E",
     "navigationBarTitleText": "DEMO",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "selectedColor": "#D82148",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/flex/index",
+        "text": "flex"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

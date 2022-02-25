@@ -1,19 +1,30 @@
-/**index.wxss**/
-.userinfo {
+.gird_list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.grid_item{
+  width: 33.3%;
+  height: 200rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #aaa;
+  justify-content: center;
+  box-sizing: border-box;
+  border-right: 1rpx solid silver;
+  border-bottom: 1rpx solid silver;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.grid_item:active{
+  background-color: silver;
 }
 
-.usermotto {
-  margin-top: 200px;
+.grid_item image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.grid_item text{
+  font-size: 24rpx ;
 }

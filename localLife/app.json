@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/message/index",
+    "pages/info/index",
     "pages/home/index"
   ],
   "window": {

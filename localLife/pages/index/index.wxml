@@ -14,3 +14,5 @@
     <text>{{item.name}}</text>
   </view>
 </view>
+
+<navigator url="/pages/message/index" open-type="switchTab">跳转页面</navigator>

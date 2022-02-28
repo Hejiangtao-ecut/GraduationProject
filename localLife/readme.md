@@ -35,3 +35,5 @@ https://www.escook.cn/slides
 
 2. 上拉触底
   - 更多用于数据分页，进行下一页数据加载
+  - onReachBottom 可以监听页面的上拉触底事件,页面内容必需大于1屏才能触发
+  - 在 json 文件中使用关键字 onReachBottonDistance 来配制上拉触底的距离，达到提前触发该事件,默认值是50px

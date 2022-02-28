@@ -5,14 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    colorList: [],
+    isLoading: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getColorList();
+  },
 
+  /**
+   * 获取颜色数据
+   */
+  getColorList() {
+    this.setData({
+      isLoading: true
+    });
+    wx.showLoading({
+      title: '加载中...',
+    });
+    wx.request({
+      url: 'https://www.escook.cn/api/color',
+      method: 'get',
+      success: ({ data }) => {
+        this.setData({
+          colorList: [...this.data.colorList, ...data.data]
+        });
+      },
+      complete: () => {
+        this.setData({
+          isLoading: false
+        });
+        wx.hideLoading();
+      }
+    })
   },
 
   /**
@@ -54,7 +82,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    !this.data.isLoading && this.getColorList();
   },
 
   /**

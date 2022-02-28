@@ -16,3 +16,7 @@
 </view>
 
 <navigator url="/pages/message/index" open-type="switchTab">跳转页面</navigator>
+
+<view class="box">
+  
+</view>

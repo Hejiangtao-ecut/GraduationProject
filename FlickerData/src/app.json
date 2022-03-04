@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/demo/index",
     "pages/index/index",
     "pages/classify/index",
     "pages/forum/index",

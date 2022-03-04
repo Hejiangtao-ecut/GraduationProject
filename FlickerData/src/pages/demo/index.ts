@@ -1,6 +1,6 @@
 /**
- * @file index/index.js
- * @desc 小程序页面
+ * @file demo/index.js
+ * @desc 云开发 demo 页面
  */
 
 Page({
@@ -9,7 +9,7 @@ Page({
     * 页面的初始数据
     */
     data: {
-        
+
     },
 
     /**

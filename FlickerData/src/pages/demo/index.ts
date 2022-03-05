@@ -40,6 +40,22 @@ Page({
 
     },
 
+    buttonTap() {
+        wx.cloud.callFunction({
+            name: "test",
+            data: {
+                a: 2,
+                b: 3
+            },
+            success: (res) => {
+                console.log(res);
+            },
+            fail: (res) => {
+                console.log(res);
+            }
+        })
+    },
+
     /**
     * 生命周期函数--监听页面卸载
     */

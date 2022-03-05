@@ -1,1 +1,1 @@
-<view>demo page</view>
+<button type="default" bindtap="buttonTap">Button</button>

@@ -6,6 +6,7 @@ const chalk = require('chalk');
 
 const page = require('./add/page');
 const component = require('./add/component');
+const cloudfunctions = require('./add/cloudfunctions');
 
 module.exports = function (plop) {
 
@@ -14,4 +15,6 @@ module.exports = function (plop) {
     plop.setGenerator('page', page);
 
     plop.setGenerator('component', component);
+
+    plop.setGenerator('cloudfunctions', cloudfunctions);
 };

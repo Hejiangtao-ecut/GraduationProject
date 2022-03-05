@@ -4,7 +4,6 @@
  */
 
 const chalk = require('chalk');
-const path = require('path');
 
 /**
  * 获取页面名称
@@ -29,13 +28,13 @@ const baseRelativePath = path => path.split('/').map(() => '../')
  * @return {boolean} 终止函数
  */
 const checkComponentPath = () => path => {
-if (path.indexOf('src/components') !== 0) {
-    return chalk.red('请按照示例输入正确的目录');
-}
-if (!getName(path)) {
-    return chalk.red('目录中必须包含组件名称，请参考示例正确输入');
-}
-return true;
+    if (path.indexOf('src/components') !== 0) {
+        return chalk.red('请按照示例输入正确的目录');
+    }
+    if (!getName(path)) {
+        return chalk.red('目录中必须包含组件名称，请参考示例正确输入');
+    }
+    return true;
 };
 
 /**
@@ -83,8 +82,66 @@ function add(path, desc, type) {
     return actions;
 }
 
+/**
+ * 校验云函数的正确性
+ */
+const checkCloudFunctionPath = () => path => {
+    if (path.indexOf('src/cloudfunctions') !== 0) {
+        return chalk.red('请按照示例输入正确的目录');
+    }
+    if (!getName(path)) {
+        return chalk.red('目录中必须包含云函数名称，请参考示例正确输入');
+    }
+    return true;
+}
+
+/**
+ * 增加云函数
+ */
+function addCloudFunction(path, desc, type) {
+    const actions = [];
+    const pageMap = new Map([
+        ['ts', 'ts.hbs'],
+        ['config', 'config.hbs'],
+        ['json', 'json.hbs']
+    ]);
+
+    pageMap.forEach((file, fileName) => {
+        let pathName = '';
+        switch (fileName) {
+            case 'ts':
+                pathName = `${path}/index.${fileName}`;
+                break;
+            case 'json':
+                pathName = `${path}/package.${fileName}`;
+                break;
+            case 'config':
+                pathName = `${path}/config.json`;
+                break;
+            default:
+                break;
+        };
+        actions.push({
+            type: 'add',
+            path: pathName,
+            templateFile: `add/${type}/template/${file}`,
+            data: {
+                name: getName(path),
+                desc,
+                rendered: '{{rendered}}',
+                err: '{{{type: errType}}}',
+                showErrorPage: '{{[]}}',
+                baseRelativePath: baseRelativePath(path)
+            }
+        });
+    });
+    return actions;
+}
+
 module.exports = {
     add,
     checkComponentPath,
-    checkPath
+    checkPath,
+    addCloudFunction,
+    checkCloudFunctionPath
 }

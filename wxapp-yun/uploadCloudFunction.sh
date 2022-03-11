@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e hjtwxapp-4g2fkowbb9335eab --n quickstartFunctions --r --project "/Users/hejiangtao02/Desktop/mycode/GraduationProject/wxapp-yun" --report_first --report

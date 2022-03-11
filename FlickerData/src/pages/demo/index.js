@@ -142,5 +142,24 @@ Page({
                 }
             });
         }
+    },
+
+    /**
+     * 更新数据
+     */
+    async upDate () {
+        const upId = await this.getDelId();
+        if (upId) {
+            DB.doc(upId).update({
+                data: {
+                    name: this.data.name,
+                    age: this.data.age
+                },
+                success(res) {
+                    console.log('success');
+                    console.log(res);
+                }
+            });
+        }
     }
 })

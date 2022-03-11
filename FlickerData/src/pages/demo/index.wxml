@@ -8,3 +8,5 @@
 
 <input placeholder="要删除的名字" bindinput="getDelName"/>
 <button type="default" bindtap="delData">删除数据</button>
+
+<button type="default" bindtap="upDate">更新数据</button>

@@ -1,0 +1,6 @@
+<!--pages/ycc/index.wxml-->
+<!-- 云存储 -->
+
+<button bindtap="upLoad">上传文件 </button>
+
+<image src="{{imgSrc}}" alt=""/>

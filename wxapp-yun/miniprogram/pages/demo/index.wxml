@@ -1,0 +1,5 @@
+<button bindtap="add">云函数：加法</button>
+
+<button bindtap="getOpenId">云函数：获取 openId</button>
+
+<button bindtap="cloudApi">数据库 API</button>
